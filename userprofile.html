@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+  <title>User Profile</title>
+  <script language="JavaScript">
+        function showdetails(){
+              document.getElementById('result').innerHTML=document.getElementById("fname").value;
+             document.getElementById('res1').innerHTML=document.getElementById("lname").value;
+               var gen=document.getElementsByName('gender');
+            for(var i=0;i<gen.length;i++)
+             {
+                if(gen[i].checked)
+                  document.getElementById("res2").innerHTML="Gender:"+gen[i].value;
+             }
+             document.getElementById('res3').innerHTML=document.getElementById("dob").value;
+             document.getElementById('res4').innerHTML=document.getElementById("email").value;
+             document.getElementById('res5').innerHTML=document.getElementById("phno").value;
+             document.getElementById('res6').innerHTML=document.getElementById("likin").value;
+             document.getElementById('res7').innerHTML=document.getElementById("ntly").value;
+             document.getElementById('res8').innerHTML=document.getElementById("homst").value;    
+            var deg=document.getElementsByName('degree');
+            for(ar i=0;i<deg.length;i++)
+             {
+                if(deg[i].checked)
+                  document.getElementById("res9").innerHTML="Degree:"+deg[i].value;
+             }
+             var martst=document.getElementsByName('martialstatus');
+             for(var i=0;i<martst.length;i++)
+              {
+                 if(martst[i].checked)
+                     document.getElementById("res10").innerHTML="Martial status:"+martst[i].value;
+               }
+              document.getElementById('res11').innerHTML=document.getElementById("uname").value;
+              document.getElementById('res12').innerHTML=document.getElementById("pwd").value;
+             var checkboxes=document.getElementsByName('language');
+            var checkboxesChecked=[];
+            for(var i=0;i<checkboxes.length;i++)
+             {
+                 if(checkboxes[i].checked){
+                       checkboxesChecked.push(checkboxes[i].value);
+               }
+            }
+             document.getElementById("res13").value=checkboxesChecked;
+             var physicallychallenged=document.getElementsByName('choice');
+             for(var i=0;i<physicallychallenged.length;i++)
+             {
+                if(physicallychallenged[i].checked)
+                       document.getElementById("res14").innerHTML="Physically Challenged:"+physicallychallenged[i].value;
+             }
+
+          
+}
+</script>
+</head>
+<body>
+<center>
+<p><b>Fill all the details</b></p>
+<form>
+
+<b>First Name</b><br>
+<input type="text" name="firstname" id="fname"><br><br>
+
+<b>Last Name</b><br>
+<input type="text" name="lastname" id="lname"><br><br>
+
+<b>Gender</b><br>
+<input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">Female<br><br>
+
+<b>Date of Birth</b><br>
+<input type="date" name="dateofbirth" id="dob"><br><br>
+
+<b>Email-id</b><br>
+<input type="email" name="email" id="email"><br><br>
+
+<b>Phone number in the format xxx-abcdefghij</b><br>
+<input type="tel" name="phonenumber" id="phno""><br><br>
+
+<b>Linkedin</b><br>
+<input type="text" name="linkedin" id="likin"><br><br>
+
+<b>Nationality</b><br>
+<input type="text" name="nationality" id="ntly"><br><br>
+
+<b>Home state</b><br>
+<input type="text" name="homestate" id="homst"><br><br>
+
+<b>Degree</b><br>
+<input type="radio" name="degree" value="beorbtech">B.E/B.Tech
+<input type="radio" name="degree" value="bsc">B.Sc<br><br>
+
+<b>Martial Status</b><br>
+<input type="radio" name="martialstatus" value="married">Married
+<input type="radio" name="martialstatus" value="unmarried">Single<br><br>
+
+<b>User Name</b><br>
+<input type="text" name="username" id="uname"><br><br>
+
+<b>Password</b><br>
+<input type="password" name="password" id="pwd"><br><br>
+
+<b>Languages Known</b><br>
+<input type="checkbox" name="language" value="tamil">Tamil
+<input type="checkbox" name="language" value="telugu">Telugu
+<input type="checkbox" name="language" value="malayalam">Malayalam
+<input type="checkbox" name="language" value="kannada">Kannada
+<input type="checkbox" name="language" value="hindi">Hindi
+<input type="checkbox" name="language" value="english">English<br><br>
+
+<b>Physically Challenged</b><br>
+<input type="radio" name="choice" value="yes">Yes
+<input type="radio" name="choice" value="no">No<br><br>
+</form>
+<input type="submit" name="submit" onclick="showdetails();"><br>
+<div id="result">First Name:</div>
+<div id="res1">Last Name:</div>
+<div id="res2">Gender:</div>
+<div id="res3">Date Of Birth:</div>
+<div id="res4">Email:</div>
+<div id="res5">Phone number:</div>
+<div id="res6">Linked in:</div>
+<div id="res7">Nationality:</div>
+<div id="res8">Home state:</div>
+<div id="res9">Degree:</div>
+<div id="res10">Martial status:</div>
+<div id="res11">User name:</div>
+<div id="res12">Password:</div>
+<div id="res13">Language:</div>
+<div id="res14">Physically challenged:</div>
+
+
+
+</center>
+</body>
+</html>
